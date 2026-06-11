@@ -1,5 +1,5 @@
 # Gaze Heads
-###  [Project Website](https://gaze.baulab.info) | [Paper](https://gaze.baulab.info) <br>
+###  [Project Website](https://gaze.baulab.info) | [Paper](https://gaze.baulab.info) | [Dataset](https://huggingface.co/datasets/baulab/openai-comic-strips) <br>
 Official code implementation of "Gaze Heads: How VLMs Look at What They Describe" for the Qwen3-VL family.
 
 ***Find the attention heads that look at whatever the model is describing — then point them somewhere else and the model describes that instead!*** <br>
@@ -10,7 +10,7 @@ To set up your python environment:
 conda create -n gazeheads python=3.10
 conda activate gazeheads
 
-cd gaze-heads-clean
+cd gaze-heads
 pip install -r requirements.txt
 ```
 The steering evaluations use Claude as a judge, so you need to export your `ANTHROPIC_API_KEY` (ideally to your bashrc). Discovery and the trajectory plots need no API key.
