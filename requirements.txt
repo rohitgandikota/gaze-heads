@@ -1,0 +1,15 @@
+# Core
+torch>=2.4
+transformers>=4.57          # first release with Qwen3-VL support
+pillow
+numpy
+matplotlib
+scipy                       # Spearman rho in 05_steer_dynamic_narration.py
+tqdm
+
+# LLM judge (03/04/05 steering evaluations)
+anthropic
+
+# Interactive notebook
+jupyter
+ipywidgets
