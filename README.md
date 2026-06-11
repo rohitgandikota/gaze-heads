@@ -1,5 +1,5 @@
 # Gaze Heads
-###  [Project Website](https://gaze.baulab.info) | [Paper](https://gaze.baulab.info) | [Dataset](https://huggingface.co/datasets/baulab/openai-comic-strips) <br>
+###  [Project Website](https://gaze.baulab.info) | [Paper](https://gaze.baulab.info) | [Interactive Demo](https://gaze.baulab.info/#demo) | [Dataset](https://huggingface.co/datasets/baulab/openai-comic-strips) <br>
 Official code implementation of "Gaze Heads: How VLMs Look at What They Describe" for the Qwen3-VL family.
 
 ***Find the attention heads that look at whatever the model is describing. Then point them somewhere else and the model describes that instead!*** <br>
@@ -78,6 +78,8 @@ python 05_steer_dynamic_narration.py --device cuda:0
 Each strip gets a random derangement schedule (never the default left-to-right order), and the script reports per-segment accuracy plus the Spearman correlation between your schedule and what the model actually described.
 
 ## Interactive Steering Notebook
+Want to try steering without a GPU? Play with the hosted [interactive demo](https://gaze.baulab.info/#demo) right in your browser.
+
 For hands-on steering, open `interactive_steering.ipynb` from the repo root:
 - pick a comic and a target panel from a dropdown: one question, six different answers
 - type a schedule like `4,2,1,6,5,3` and watch the trajectory heatmap follow it
