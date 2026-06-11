@@ -64,11 +64,11 @@ python 03_steer_vqa.py --device cuda:0
 This runs the full judged protocol over every (strip, target panel) pair with three conditions: the top-100 gaze heads, random non-gaze heads, and all heads. Steering the gaze heads redirects the answer to the chosen panel at ~80% (chance is 16.7%); non-gaze heads do nothing and all heads destroy generation. Results with bootstrap CIs are saved to `logs/steer_vqa/aggregate_results.json`. Use `--max-comics 10` for a quick run, and `--start-comic-idx` to shard across GPUs.
 
 ### Static narration steering
-Hold the gaze heads on one panel for an entire ~300-token narration:
+Ask the deliberately ambiguous question "What is happening in this panel of the comic strip?" without saying which panel. Unsteered, the model picks the first panel or summarizes the strip; with the gaze heads held on a target panel, it describes that panel:
 ```
 python 04_steer_static_narration.py --device cuda:0
 ```
-The narration is judged segment-by-segment with a forced 1-of-6 panel match. Use `--targets-per-strip 6` for the exhaustive paper-style sweep.
+Each ~100-token answer gets a forced 1-of-6 panel match from the judge, and answers identical to the baseline count as misses. Use `--targets-per-strip 1` for a quick run.
 
 ### Dynamic narration steering
 Switch the target panel every 50 tokens mid-generation and watch the model wrap up one panel and move to the next:
