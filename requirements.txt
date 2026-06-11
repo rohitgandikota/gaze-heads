@@ -7,6 +7,9 @@ matplotlib
 scipy                       # Spearman rho in 05_steer_dynamic_narration.py
 tqdm
 
+# Dataset download (download_data.py)
+datasets
+
 # LLM judge (03/04/05 steering evaluations)
 anthropic
 
