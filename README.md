@@ -1,5 +1,5 @@
 # Gaze Heads
-###  [Project Website](https://gaze.baulab.info) | [Paper](https://gaze.baulab.info) | [Interactive Demo](https://gaze.baulab.info/#demo) | [Dataset](https://huggingface.co/datasets/baulab/openai-comic-strips) <br>
+###  [Project Website](https://gaze.baulab.info) | [Arxiv Preprint](https://arxiv.org/abs/2606.14703) | [Interactive Demo](https://gaze.baulab.info/#demo) | [Dataset](https://huggingface.co/datasets/baulab/openai-comic-strips) <br>
 Official code implementation of "Gaze Heads: How VLMs Look at What They Describe" for the Qwen3-VL family.
 
 ***Find the attention heads that look at whatever the model is describing. Then point them somewhere else and the model describes that instead!*** <br>
@@ -88,10 +88,12 @@ For hands-on steering, open `interactive_steering.ipynb` from the repo root:
 Have fun!
 
 ## Citing our work
+The preprint can be cited as follows
 ```bibtex
 @article{gandikota2026gazeheads,
   title={Gaze Heads: How VLMs Look at What They Describe},
   author={Gandikota, Rohit and Bau, David},
+  journal={arXiv preprint arXiv:2606.14703},
   year={2026}
 }
 ```
